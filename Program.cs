@@ -35,3 +35,20 @@ int Sum(int num){
     }   
     return R;
 }
+
+//Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+//1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+//6, 1, 33 -> [6, 1, 33]
+Console.WriteLine("----------Задание №3----------");
+Console.WriteLine("Введите количество элементов массива: ");
+int nummass = int.Parse(Console.ReadLine()!);
+int[] array = Massive(nummass);
+Console.WriteLine($"Массив: [{String.Join(", ", array)}]");
+
+int[] Massive(int size){
+    int[] result = new int[size];
+    for (int i = 0; i < size; i++){
+        result[i] = new Random().Next(99);
+    }
+    return result;
+}
